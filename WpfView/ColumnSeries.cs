@@ -160,7 +160,8 @@ namespace LiveCharts.Wpf
                     .EnsureElementBelongsToCurrentDrawMargin(pbv.DataLabel);
             }
 
-            pbv.Rectangle.Fill = Fill;
+            pbv.Rectangle.Fill = point.Fill as Brush ?? Fill;
+
             pbv.Rectangle.StrokeThickness = StrokeThickness;
             pbv.Rectangle.Stroke = Stroke;
             pbv.Rectangle.StrokeDashArray = StrokeDashArray;
